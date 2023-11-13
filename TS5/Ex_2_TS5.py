@@ -27,6 +27,7 @@ class NotasSemestre:
         notas_semestre.mostrar_notas()
         print(f"Nota final da UC {uc_escolhida}: {notas_semestre.notas[uc_escolhida-1]}")
         print(f"Média total: {notas_semestre.calcular_media()}")
+        
 
 
 notas_semestre = NotasSemestre()
