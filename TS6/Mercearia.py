@@ -1,6 +1,3 @@
-from typing import Self
-
-
 class Frutas():
     def __init__(self):
         self.frutas = []
@@ -32,7 +29,7 @@ class Frutas():
     
     def inserir_stock(self):
         for i in range(6):
-            self.stock.append(int(input(f"Quantos {self.frutas[i]} tem no estoque?\n")))
+            self.stock.append(int(input(f"Quantos(as) {self.frutas[i]} têm no estoque?\n")))
     
     def excluir_frutas(self,nome):
         for i in range(len(self.frutas)):
@@ -46,7 +43,7 @@ class Frutas():
                     break
             
 def main():
-    frutas = Frutas()
+    mercearia = Frutas()
     while True:
         print("\n1. Inserir Frutas")
         print("2. Inserir Stock")
@@ -57,16 +54,16 @@ def main():
         opcao = int(input("Digite a opção desejada: "))
 
         if opcao == 1:
-            frutas.inserir_frutas()
+            mercearia.inserir_frutas()
         elif opcao == 2:
-            frutas.inserir_stock()
+            mercearia.inserir_stock()
         elif opcao == 3:
-            frutas.altera_stock()
+            mercearia.altera_stock()
         elif opcao == 5:
-            frutas.listar_frutas()
+            mercearia.listar_frutas()
         elif opcao == 4:
             name = input("Qual fruta quer excluir?")
-            frutas.excluir_frutas(name)
+            mercearia.excluir_frutas(name)
         elif opcao == 0:
             break
         else:
